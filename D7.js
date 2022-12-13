@@ -2,14 +2,28 @@
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
 */
+function firstTwoandLasthree(string1, string2){
+let firstTwo= string1.substring(0,2);
+let Lastthree= string2.substring(string2.lenght=3);
+return result;
+}
+console.log(firstTwoandLasthree("Ciao","Michela"))
 
-
-
-//usare split?
 
 /* ESERCIZIO 2
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
+function numbers() {
+  let random = []
+  for (let i = 0; i < 10; i++) {
+    let randomnum = Math.floor(Math.random() * 100)
+    random.push(randomnum);
+
+  }
+  console.log(random);
+  return random;
+}
+numbers();
 
 
 /* ESERCIZIO 3
@@ -22,24 +36,19 @@ console.log(pari);
 /* ESERCIZIO 4
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
-const array=[1,2,3,4,5];
-let sum= 0;
-for(let i=0; i<array-length;i++){
-sum+=array[i]
+const array = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let i = 0; i < array - length; i++) {
+  sum += array[i]
 
 }
-console-log(sum)
+console - log(sum)
+
 /* ESERCIZIO 5
   Scrivi una funzione per sommare i numeri contenuti in un array (usare REDUCE)
 */
 
 
-const add = arr => arr.reduce((a, b) => a + b, 0);
-
-let arr = [3, 6, 1, 5, 8];
-let summ = add(arr);
-
-console.log(summ)
 
 /* ESERCIZIO 6
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
