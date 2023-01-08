@@ -227,23 +227,67 @@ const movies = [
 /* ESERCIZIO 10
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
 */
+function oldestMovie(arr) {
+  let result = { Year: 2100 };
+  for (let i = 0; i < array.length; i++) {
+    let currentYear = parseInt(array[i].Year);
+    if (currentYear < result.Year) {
+      result = array[i];
+    }
+  }
+
+  return result;
+};
+
+console.log(oldestMovie(movies));
 
 /* ESERCIZIO 11
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
 */
+function countMovies(array) {
+  return array.length;
+};
 
+console.log(countMovies(movies));
 /* ESERCIZIO 12
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
+function onlyTitles(array){
+  return array.map(elem => elem.Title);
+};
 
+console.log(onlyTitles(movies));
 /* ESERCIZIO 13
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
-
+function onlyInThisMillennium(array) {
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    if (parseInt(array[i].Year) > 1999) {
+      result.push(array[i]);
+    }
+  }
+  return result;
+};
 /* ESERCIZIO 14
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
-
+function getMovieById(array, id) {
+  let foundMovie = null;
+  for (let i = 0; i < array.length; i++) {
+    if (array[i].imdbID === id) {
+      foundMovie = array[i];
+    }
+  }
+  return foundMovie;
+};
 /* ESERCIZIO 15
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+function sumAllTheYears(array) {
+  let result = 0;
+  for (let i = 0; i < array.length; i++) {
+    result += parseInt(array[i].Year);
+  }
+  return result;
+};
